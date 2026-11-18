@@ -1,23 +1,26 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Experiencia } from "@/components/experiencia/Experiencia";
 
-// The home route ships no og:image, so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: "Francielly — Um capítulo bonito da nossa história" },
+      {
+        name: "description",
+        content: "Um presente de aniversário feito com amor para Francielly, em 18 de novembro de 2026.",
+      },
+      { property: "og:title", content: "Francielly — Um capítulo bonito da nossa história" },
+      {
+        property: "og:description",
+        content: "Fiz uma coisa especial para você... Um presente de aniversário feito com amor.",
+      },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
-  return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
-  );
+  return <Experiencia />;
 }

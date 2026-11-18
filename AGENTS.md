@@ -28,3 +28,11 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+
+## Project rules
+
+- All editable copy, photo paths, captions and the music path live in `src/config/experiencia.ts`; components only read from it, so the owner can personalize everything in one file.
+- Photos are `src: null` until a real file exists in `public/images/`; `Fotografia` renders an elegant placeholder instead, so no broken images or 404s appear.
+- The experience is one narrative route (`/`) with section anchors, because the brief asks for a continuous story rather than separate pages.
+- Visitor progress (hearts found, letter opened) is kept only in localStorage via `src/lib/progresso.ts`; no backend, no personal data collected.
+- Animations are CSS + IntersectionObserver (no animation library) and every one is neutralized under `prefers-reduced-motion`.

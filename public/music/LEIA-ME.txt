@@ -1,0 +1,2 @@
+Coloque aqui o MP3 escolhido (ex.: nossa-musica.mp3) e preencha
+backgroundMusic: "/music/nossa-musica.mp3"  em src/config/experiencia.ts
