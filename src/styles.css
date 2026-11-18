@@ -729,3 +729,6 @@
     clip-path: none !important;
   }
 }
+#lovable-badge {
+  display: none !important;
+}
