@@ -1,0 +1,19 @@
+PROJETO FRANCiELLY — FOTOS E MÚSICA CONFIGURADAS
+
+O que foi incluído:
+- 3 fotografias de Pablo e Francielly.
+- 3 fotografias adicionais da família, além da foto de família que já estava no projeto.
+- Recortes reais para as áreas Francielly + Ivy e Ivy.
+- Música Get You em formato M4A/AAC, configurada para começar após clicar em ABRIR MEU PRESENTE.
+- src/config/experiencia.ts atualizado com os caminhos dos arquivos.
+
+IMPORTANTE PARA ATUALIZAR O GITHUB:
+1. Extraia este ZIP.
+2. Copie o conteúdo da pasta francielly-main para a pasta do repositório local, substituindo os arquivos correspondentes.
+3. Preserve a pasta .git do seu repositório local (ela não vem neste ZIP).
+4. Faça commit e push para a branch main.
+5. Depois, aguarde a sincronização da Lovable e publique as alterações.
+
+A música enviada estava em contêiner MP4/M4A com áudio AAC, apesar do nome original terminar em .mp3. Foi mantido o áudio sem recompressão e salvo como public/music/get-you.m4a.
+
+Nota: a reprodução de uma faixa comercial em um site público pode estar sujeita a restrições de direitos autorais ou bloqueios da plataforma de hospedagem.

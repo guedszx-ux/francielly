@@ -1,14 +1,9 @@
-Coloque aqui as fotografias reais. Nomes sugeridos (veja src/config/experiencia.ts):
+FOTOGRAFIAS REAIS ADICIONADAS
 
-francielly.jpg            — foto de destaque da Francielly (Capítulo I)
-casal-01.jpg              — começo da história, fevereiro de 2023
-historia-familia.jpg      — marco "Nossa família"
-historia-aniversario.jpg  — marco "Novembro de 2026"
-familia-01.jpg            — foto principal dos três juntos
-francielly-ivy.jpg        — Francielly com a Ivy
-ivy.jpg                   — a Ivy
-familia-02.jpg            — nós três
-album-01.jpg … album-08.jpg — álbum de memórias
-familia-final.jpg         — fundo opcional da surpresa final
+casal-01.jpg, casal-02.jpg, casal-03.jpg — registros de Pablo e Francielly
+familia-01.jpg — foto principal dos três, já existente no projeto
+familia-02.jpg, familia-03.jpg, familia-04.jpg — outros registros da família
+francielly-ivy.jpg — recorte de uma foto real para a seção Francielly e Ivy
+ivy.jpg — recorte de uma foto real com foco na Ivy
 
-Depois de adicionar o arquivo, troque  src: null  pelo caminho (ex.: "/images/francielly.jpg").
+Os caminhos já estão configurados em src/config/experiencia.ts.

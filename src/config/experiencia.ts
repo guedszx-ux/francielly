@@ -7,21 +7,21 @@
  *  Tudo o que pode ser trocado (textos, fotos, legendas e música) está aqui.
  *
  *  COMO ADICIONAR UMA FOTO
- *  1. Coloque o arquivo na pasta  public/images/   (ex.: public/images/francielly.jpg)
+ *  1. Coloque o arquivo na pasta  public/images/   (ex.: public/images/casal-01.jpg)
  *  2. No item correspondente abaixo, troque   src: null
- *     por                                     src: "/images/francielly.jpg"
+ *     por                                     src: "/images/casal-01.jpg"
  *  3. (Opcional) escreva uma legenda em  legenda: "..."
  *  Enquanto  src  for null, o site mostra um espaço reservado elegante — nunca uma imagem quebrada.
  *
  *  COMO ADICIONAR A MÚSICA
- *  1. Coloque o MP3 em  public/music/   (ex.: public/music/nossa-musica.mp3)
- *  2. Preencha  backgroundMusic: "/music/nossa-musica.mp3"
+ *  1. Coloque a música em  public/music/   (ex.: public/music/get-you.m4a)
+ *  2. Preenchido:  backgroundMusic: "/music/get-you.m4a"
  *  Com o campo vazio, o controle de música fica oculto.
  * ============================================================================
  */
 
 export type Foto = {
-  /** Caminho a partir de /public. Ex.: "/images/francielly.jpg". Use null até ter a foto. */
+  /** Caminho a partir de /public. Ex.: "/images/casal-01.jpg". Use null até ter a foto. */
   src: string | null;
   /** Descrição da foto para leitores de tela. */
   alt: string;
@@ -38,8 +38,8 @@ export const experiencia = {
   filha: { nome: "Ivy", idade: "9 meses" },
   autor: "Pablo Guedes",
 
-  /** 🎵 MÚSICA — caminho do MP3 dentro de /public. Ex.: "/music/nossa-musica.mp3" */
-  backgroundMusic: "",
+  /** 🎵 MÚSICA — caminho do áudio dentro de /public. Ex.: "/music/get-you.m4a" */
+  backgroundMusic: "/music/get-you.m4a",
   /** Volume inicial da música (0 a 1). */
   volumeInicial: 0.55,
 
@@ -64,8 +64,8 @@ export const experiencia = {
       "Hoje é dia de celebrar você, sua vida, seus sonhos e tudo de bonito que ainda está por vir.",
     ],
     fechamento: "Feliz aniversário, meu amor.",
-    // 📷 Foto de destaque da Francielly → public/images/francielly.jpg
-    foto: { src: null, alt: "Francielly", legenda: "" } as Foto,
+    // 📷 Foto de destaque da Francielly → public/images/casal-01.jpg
+    foto: { src: "/images/casal-01.jpg", alt: "Pablo e Francielly juntos", legenda: "" } as Foto,
   },
 
   historia: {
@@ -77,21 +77,21 @@ export const experiencia = {
         rotulo: "FEVEREIRO DE 2023",
         texto: "O começo de uma história que ainda está sendo escrita.",
         // 📷 → public/images/casal-01.jpg
-        foto: { src: null, alt: "Francielly e eu no começo da nossa história", legenda: "" } as Foto,
+        foto: { src: "/images/casal-03.jpg", alt: "Pablo e Francielly em um momento juntos", legenda: "" } as Foto,
       },
       {
         rotulo: "NOSSA FAMÍLIA",
         texto:
           "A vida nos trouxe um presente que mudou tudo e tornou nossa história ainda mais especial: nossa pequena Ivy.",
         // 📷 → public/images/historia-familia.jpg
-        foto: { src: null, alt: "Nossa família com a pequena Ivy", legenda: "" } as Foto,
+        foto: { src: "/images/familia-01.jpg", alt: "Pablo, Francielly e Ivy", legenda: "" } as Foto,
       },
       {
         rotulo: "NOVEMBRO DE 2026",
         texto:
           "Mais um aniversário seu, mais uma oportunidade de celebrar a mulher que amo e tudo aquilo que estamos construindo juntos.",
         // 📷 → public/images/historia-aniversario.jpg
-        foto: { src: null, alt: "Francielly no aniversário de 2026", legenda: "" } as Foto,
+        foto: { src: "/images/casal-02.jpg", alt: "Pablo e Francielly", legenda: "" } as Foto,
       },
     ],
   },
@@ -116,13 +116,13 @@ export const experiencia = {
     frase: "Agora somos três. E essa é uma das histórias mais bonitas que a vida me permitiu viver.",
     fotos: {
       // 📷 Foto principal grande dos três juntos → public/images/familia-01.jpg
-      principal: { src: null, alt: "Nós três juntos", legenda: "" } as Foto,
+      principal: { src: "/images/familia-01.jpg", alt: "Pablo, Francielly e Ivy juntos", legenda: "" } as Foto,
       // 📷 Francielly com Ivy → public/images/francielly-ivy.jpg
-      franciellyComIvy: { src: null, alt: "Francielly com a Ivy", legenda: "" } as Foto,
+      franciellyComIvy: { src: "/images/francielly-ivy.jpg", alt: "Francielly com a pequena Ivy", legenda: "" } as Foto,
       // 📷 Ivy → public/images/ivy.jpg
-      ivy: { src: null, alt: "Nossa pequena Ivy", legenda: "" } as Foto,
+      ivy: { src: "/images/ivy.jpg", alt: "Nossa pequena Ivy", legenda: "" } as Foto,
       // 📷 Nós três → public/images/familia-02.jpg
-      nosTres: { src: null, alt: "Nós três", legenda: "" } as Foto,
+      nosTres: { src: "/images/familia-03.jpg", alt: "Pablo, Francielly e Ivy", legenda: "" } as Foto,
     },
   },
 
@@ -158,14 +158,14 @@ export const experiencia = {
     ] as { id: CategoriaAlbum; nome: string }[],
     // 📷 Oito espaços do álbum → public/images/album-01.jpg ... album-08.jpg
     fotos: [
-      { categoria: "francielly", src: null, alt: "Francielly", legenda: "" },
-      { categoria: "nos-dois", src: null, alt: "Nós dois", legenda: "" },
-      { categoria: "ivy", src: null, alt: "Ivy", legenda: "" },
-      { categoria: "familia", src: null, alt: "Nossa família", legenda: "" },
-      { categoria: "nos-dois", src: null, alt: "Nós dois", legenda: "" },
-      { categoria: "francielly", src: null, alt: "Francielly", legenda: "" },
-      { categoria: "familia", src: null, alt: "Nossa família", legenda: "" },
-      { categoria: "ivy", src: null, alt: "Ivy", legenda: "" },
+      { categoria: "francielly", src: "/images/casal-01.jpg", alt: "Francielly e Pablo juntos", legenda: "" },
+      { categoria: "nos-dois", src: "/images/casal-02.jpg", alt: "Pablo e Francielly", legenda: "" },
+      { categoria: "ivy", src: "/images/ivy.jpg", alt: "Ivy", legenda: "" },
+      { categoria: "familia", src: "/images/familia-01.jpg", alt: "Pablo, Francielly e Ivy", legenda: "" },
+      { categoria: "nos-dois", src: "/images/casal-03.jpg", alt: "Pablo e Francielly", legenda: "" },
+      { categoria: "familia", src: "/images/familia-02.jpg", alt: "Nossa família", legenda: "" },
+      { categoria: "familia", src: "/images/familia-03.jpg", alt: "Nossa família", legenda: "" },
+      { categoria: "familia", src: "/images/familia-04.jpg", alt: "Nossa família", legenda: "" },
     ] as (Foto & { categoria: CategoriaAlbum })[],
   },
 
@@ -209,7 +209,7 @@ export const experiencia = {
     bloqueado: "Encontre os cinco corações para revelar esta última página.",
     botaoBloqueado: "VOLTAR AOS CORAÇÕES",
     // 📷 Foto opcional da família ao fundo → public/images/familia-final.jpg
-    fotoFundo: { src: null, alt: "Nossa família", legenda: "" } as Foto,
+    fotoFundo: { src: "/images/familia-01.jpg", alt: "Nossa família", legenda: "" } as Foto,
   },
 };
 

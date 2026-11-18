@@ -1,2 +1,7 @@
-Coloque aqui o MP3 escolhido (ex.: nossa-musica.mp3) e preencha
-backgroundMusic: "/music/nossa-musica.mp3"  em src/config/experiencia.ts
+MÚSICA CONFIGURADA
+
+Arquivo: get-you.m4a
+Formato real: AAC em contêiner MP4/M4A (áudio estéreo).
+Caminho configurado em src/config/experiencia.ts: /music/get-you.m4a
+
+A reprodução começa após a interação da visitante com o botão de abertura, respeitando as regras dos navegadores.
